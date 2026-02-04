@@ -78,6 +78,23 @@
         @keyframes shine {
             to { background-position: 200% center; }
         }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid #CCA43B;
+            border-radius: 50%;
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body class="bg-pattern min-h-screen text-jaggery-dark font-sans flex flex-col">
@@ -90,9 +107,16 @@
         
         <!-- Logo Area -->
         <div class="text-center mb-8 fade-in-up">
-            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-jaggery-dark text-jaggery-light mb-4 shadow-lg">
-                <i class="fa-solid fa-seedling text-3xl"></i>
+            <div class="logo-container mb-4">
+                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border-4 border-jaggery-dark">
+                    <!-- LOGO PLACEHOLDER: Replace the src with your actual logo path -->
+                    <img src="VRandSons-logo.png" 
+                         alt="VR and Sons Logo" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://ui-avatars.com/api/?name=VR+Sons&background=4A321F&color=E6C9A8&size=128'">
+                </div>
             </div>
+            
             <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-wide text-jaggery-dark">
                 VR and Sons
             </h1>
