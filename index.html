@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR and Sons - Premium Jaggery Coming Soon</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jaggery: {
+                            light: '#E6C9A8',
+                            gold: '#CCA43B',
+                            base: '#8B5A2B',
+                            dark: '#4A321F',
+                            leaf: '#556B2F'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-pattern {
+            background-color: #fdf6e3;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(139, 90, 43, 0.15);
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, #8B5A2B 0%, #CCA43B 50%, #8B5A2B 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body class="bg-pattern min-h-screen text-jaggery-dark font-sans flex flex-col">
+
+    <!-- Decorative Top Bar -->
+    <div class="h-2 w-full bg-gradient-to-r from-jaggery-leaf via-jaggery-gold to-jaggery-base"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 flex flex-col items-center justify-center flex-grow">
+        
+        <!-- Logo Area -->
+        <div class="text-center mb-8 fade-in-up">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-jaggery-dark text-jaggery-light mb-4 shadow-lg">
+                <i class="fa-solid fa-seedling text-3xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-wide text-jaggery-dark">
+                VR & Sons
+            </h1>
+            <div class="mt-2 inline-block px-4 py-1 rounded-full border border-jaggery-gold/40 bg-jaggery-gold/10">
+                <p class="text-jaggery-base uppercase tracking-widest text-xs font-bold shimmer">Coming Soon</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl w-full">
+            
+            <!-- Hero Info Card -->
+            <div class="glass-card rounded-2xl p-8 md:p-12 text-center lg:text-left fade-in-up delay-100 flex flex-col justify-center">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-jaggery-dark">
+                    Something Sweet <br class="hidden md:block text-jaggery-gold"> is Coming Soon
+                </h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                    We are bringing you the finest, organic, chemical-free jaggery straight from our fields to your kitchen. VR & Sons is currently preparing the harvest to ensure you receive the authentic taste of tradition.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start justify-center lg:justify-start space-x-4">
+                        <div class="w-10 h-10 mt-1 flex-shrink-0 rounded-full bg-jaggery-light/30 flex items-center justify-center text-jaggery-base">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <span class="text-gray-600 leading-snug">
+                            235, AMBAPARADI, HATFALLIYA, MANDAVI ROAD,<br>
+                            KIM, Surat, Gujarat, 394160
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Features Mini Grid -->
+                <div class="grid grid-cols-3 gap-4 border-t border-jaggery-light pt-8">
+                    <div class="text-center">
+                        <i class="fa-solid fa-leaf text-jaggery-gold mb-1"></i>
+                        <p class="text-[10px] uppercase font-bold tracking-tighter">Organic</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-mortar-pestle text-jaggery-gold mb-1"></i>
+                        <p class="text-[10px] uppercase font-bold tracking-tighter">Traditional</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-truck-fast text-jaggery-gold mb-1"></i>
+                        <p class="text-[10px] uppercase font-bold tracking-tighter">Farm Fresh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div id="contact-container" class="glass-card rounded-2xl p-8 md:p-10 fade-in-up delay-200">
+                <h3 class="text-2xl font-serif font-bold mb-2 text-jaggery-dark">Get Early Access</h3>
+                <p class="text-sm text-gray-600 mb-6">Register your interest below to receive a special launch offer and notification when we open.</p>
+                
+                <form id="contactForm" name="google-sheet-form" method="POST" action="">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-jaggery-base uppercase mb-1">Full Name</label>
+                            <input type="text" name="name" required placeholder="Your Name"
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-jaggery-gold outline-none transition bg-white/50">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-jaggery-base uppercase mb-1">Email Address</label>
+                            <input type="email" name="email" required placeholder="email@example.com"
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-jaggery-gold outline-none transition bg-white/50">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-jaggery-base uppercase mb-1">Message (Optional)</label>
+                            <textarea name="message" rows="3" placeholder="Tell us what you're looking for..."
+                                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-jaggery-gold outline-none transition bg-white/50 resize-none"></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn"
+                            class="w-full py-4 bg-jaggery-base hover:bg-jaggery-dark text-white font-bold rounded-xl shadow-lg transform transition active:scale-95 flex items-center justify-center space-x-2">
+                            <span>Notify Me on Launch</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Status Messages -->
+                <div id="statusMessage" class="hidden mt-6 p-4 rounded-xl text-center text-sm font-medium"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center text-gray-500 text-sm bg-white/50 border-t border-jaggery-light/30">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-8 mb-4">
+                <a href="https://www.facebook.com/share/1C9ta8xfzp/" target="_blank" rel="noopener noreferrer" class="text-jaggery-base hover:text-jaggery-dark transition transform hover:scale-110" title="Facebook">
+                    <i class="fa-brands fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/vrandsons" target="_blank" rel="noopener noreferrer" class="text-jaggery-base hover:text-jaggery-dark transition transform hover:scale-110" title="Instagram">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ankur-prajapati-2ba6013aa/" target="_blank" rel="noopener noreferrer" class="text-jaggery-base hover:text-jaggery-dark transition transform hover:scale-110" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 VR & Sons Jaggery. Surat, Gujarat.</p>
+        </div>
+    </footer>
+
+    <script>
+        const scriptURL = 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL';
+        const form = document.forms['google-sheet-form'];
+        const statusMsg = document.getElementById('statusMessage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>';
+            submitBtn.classList.add('opacity-70');
+
+            if (scriptURL === 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL') {
+                setTimeout(() => {
+                    showStatus('Registration successful! (Demo mode - please configure script URL)', 'success');
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Notify Me on Launch</span> <i class="fa-solid fa-paper-plane text-sm"></i>';
+                    submitBtn.classList.remove('opacity-70');
+                }, 1500);
+                return;
+            }
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    showStatus('Thank you! We will notify you when we launch.', 'success');
+                    form.reset();
+                })
+                .catch(error => {
+                    showStatus('Oops! Something went wrong. Please try again later.', 'error');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Notify Me on Launch</span> <i class="fa-solid fa-paper-plane text-sm"></i>';
+                    submitBtn.classList.remove('opacity-70');
+                });
+        });
+
+        function showStatus(text, type) {
+            statusMsg.innerText = text;
+            statusMsg.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+            
+            if (type === 'success') {
+                statusMsg.classList.add('bg-green-100', 'text-green-800');
+            } else {
+                statusMsg.classList.add('bg-red-100', 'text-red-800');
+            }
+        }
+    </script>
+</body>
+</html>
