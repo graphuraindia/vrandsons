@@ -205,7 +205,9 @@
     </footer>
 
     <script>
+        // Replace the string below with your Google Script Web App URL
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx22OWnE4qZGfB_bvQpIbxuiXCgD7DQ2D1bDeG1FxdYPZyp1H4J-ZAnH_z1UuDOK3MJfA/exec';
+        
         const form = document.forms['google-sheet-form'];
         const statusMsg = document.getElementById('statusMessage');
         const submitBtn = document.getElementById('submitBtn');
@@ -217,24 +219,23 @@
             submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>';
             submitBtn.classList.add('opacity-70');
 
-            if (scriptURL === 'https://script.google.com/macros/s/AKfycbx22OWnE4qZGfB_bvQpIbxuiXCgD7DQ2D1bDeG1FxdYPZyp1H4J-ZAnH_z1UuDOK3MJfA/exec') {
+            if (scriptURL === 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL' || scriptURL === '') {
                 setTimeout(() => {
-                    showStatus('Registration successful! (Demo mode - please configure script URL)', 'success');
-                    form.reset();
+                    showStatus('Connection required: Please paste your Google Script URL into the code.', 'error');
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = '<span>Notify Me on Launch</span> <i class="fa-solid fa-paper-plane text-sm"></i>';
                     submitBtn.classList.remove('opacity-70');
-                }, 1500);
+                }, 1000);
                 return;
             }
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    showStatus('Thank you! We will notify you when we launch.', 'success');
+                    showStatus('Thank you! Your information has been saved to our sheet.', 'success');
                     form.reset();
                 })
                 .catch(error => {
-                    showStatus('Oops! Something went wrong. Please try again later.', 'error');
+                    showStatus('Oops! Something went wrong. Check your Script URL and permissions.', 'error');
                 })
                 .finally(() => {
                     submitBtn.disabled = false;
