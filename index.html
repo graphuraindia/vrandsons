@@ -205,7 +205,7 @@
     </footer>
 
     <script>
-        const scriptURL = 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx22OWnE4qZGfB_bvQpIbxuiXCgD7DQ2D1bDeG1FxdYPZyp1H4J-ZAnH_z1UuDOK3MJfA/exec';
         const form = document.forms['google-sheet-form'];
         const statusMsg = document.getElementById('statusMessage');
         const submitBtn = document.getElementById('submitBtn');
@@ -217,7 +217,7 @@
             submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>';
             submitBtn.classList.add('opacity-70');
 
-            if (scriptURL === 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL') {
+            if (scriptURL === 'https://script.google.com/macros/s/AKfycbx22OWnE4qZGfB_bvQpIbxuiXCgD7DQ2D1bDeG1FxdYPZyp1H4J-ZAnH_z1UuDOK3MJfA/exec') {
                 setTimeout(() => {
                     showStatus('Registration successful! (Demo mode - please configure script URL)', 'success');
                     form.reset();
