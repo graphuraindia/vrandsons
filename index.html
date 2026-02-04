@@ -219,7 +219,7 @@
             submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>';
             submitBtn.classList.add('opacity-70');
 
-            if (scriptURL === 'REPLACE_WITH_YOUR_GOOGLE_SCRIPT_URL' || scriptURL === '') {
+            if (scriptURL === 'https://script.google.com/macros/s/AKfycbx22OWnE4qZGfB_bvQpIbxuiXCgD7DQ2D1bDeG1FxdYPZyp1H4J-ZAnH_z1UuDOK3MJfA/exec' || scriptURL === '') {
                 setTimeout(() => {
                     showStatus('Connection required: Please paste your Google Script URL into the code.', 'error');
                     submitBtn.disabled = false;
